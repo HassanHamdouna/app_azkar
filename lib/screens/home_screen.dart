@@ -16,7 +16,6 @@ class _HomeScreenState extends State<HomeScreen> {
     return  Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-
         elevation: 0,
         backgroundColor: Colors.transparent,
         centerTitle: true,
@@ -47,7 +46,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: 20,
                 child: Text('لا إله الإ الله', style: GoogleFonts.arefRuqaa(),),
               ),
-              const PopupMenuDivider(),
+              const PopupMenuDivider(
+              ),
               PopupMenuItem(
                 value: 'لا حول ولا قوة إلا بالله',
                 height: 20,
@@ -175,7 +175,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         });
                       },
                       style: ElevatedButton.styleFrom(
-                          primary: const Color(0xFF21ABA5),
+                          backgroundColor: const Color(0xFF21ABA5),
                         shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.only(topRight: Radius.circular(10),),
                         )
@@ -193,7 +193,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           });
                         },
                         style: ElevatedButton.styleFrom(
-                          primary:const Color(0xFF1D566E),
+                          backgroundColor:const Color(0xFF1D566E),
                           shape: const RoundedRectangleBorder(
                             borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10))
                           )
