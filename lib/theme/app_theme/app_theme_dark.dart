@@ -10,6 +10,10 @@ ThemeData   getAppThemeDark() =>  ThemeData(
     iconTheme: IconThemeData(
         color: AppColorDark.iconColorDark
     ),
+    titleTextStyle: TextStyle(
+        color: AppColorDark.iconColorDark,
+      fontSize: 20
+    ),
   ),
   scaffoldBackgroundColor:AppColorDark.bakGroundColorDark ,
 

@@ -1,14 +1,21 @@
 import 'package:app_azkar/theme/app_color/app_color_light.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 ThemeData getAppThemeLight() => ThemeData(
       primaryColor: AppColorLight.primaryColorLight,
       appBarTheme: const AppBarTheme(
-        color: AppColorLight.doNotColorLight,
+
+        backgroundColor:AppColorLight.doNotColorLight ,
+        // color: AppColorLight.doNotColorLight,
         centerTitle: true,
         iconTheme: IconThemeData(
           color: AppColorLight.iconColorLight
+        ),
+        titleTextStyle: TextStyle(
+          color: AppColorLight.iconColorLight,
+            fontSize: 20
         ),
       ),
       scaffoldBackgroundColor:AppColorLight.whiteColorLight ,
