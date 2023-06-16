@@ -1,3 +1,5 @@
+import 'package:app_azkar/theme/app_theme/app_theme_dark.dart';
+import 'package:app_azkar/theme/app_theme/app_theme_light.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -10,19 +12,28 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _counter = 0 ;
+  bool _iconBool = false ;
   String _content = 'استغفر الله' ;
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        leading: IconButton(
+          icon: _iconBool ?Icon(Icons.wb_sunny_outlined):Icon(Icons.nights_stay_rounded),
+          onPressed: (){
+            setState(() {
+              _iconBool ? getAppThemeLight():getAppThemeDark();
+              _iconBool=!_iconBool;
+            });
+          },
+        ),
         elevation: 0,
         backgroundColor: Colors.transparent,
         centerTitle: true,
         automaticallyImplyLeading: true,
         title:  const Text('مسبحة الإكترونية',),
         actions: [
-
           PopupMenuButton<String>(
               // light
             icon: const Icon(Icons.more_vert,color: const Color(0xFF21ABA5) ,),
