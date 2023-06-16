@@ -23,7 +23,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    bool _cheakTheme = Provider.of<ThemeProvider>(context).savedTheme == ('ThemeDark');
+    bool _cheakTheme =
+        Provider.of<ThemeProvider>(context).savedTheme == ('ThemeDark');
 
     return Scaffold(
       extendBodyBehindAppBar: true,
@@ -44,9 +45,10 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 0,
         centerTitle: true,
         automaticallyImplyLeading: true,
-        title:  Text('مسبحة الإكترونية',style: GoogleFonts.arefRuqaa(
-
-        ),),
+        title: Text(
+          'مسبحة الإكترونية',
+          style: GoogleFonts.arefRuqaa(),
+        ),
         actions: [
           PopupMenuButton<String>(
               // light
@@ -61,11 +63,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   });
                 }
               },
+              offset: const Offset(0, 50),
               itemBuilder: (context) {
                 return const [
                   PopupMenuItem(
                     value: 'الحمد الله',
-                    height: 20,
+                    padding: EdgeInsets.only(right: 10),
+                    height: 12,
                     child: Text(
                       'الحمد الله',
                     ),
@@ -73,7 +77,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   PopupMenuDivider(),
                   PopupMenuItem(
                     value: 'لا إله الإ الله',
-                    height: 20,
+                    padding: EdgeInsets.only(right: 10),
+                    height: 12,
                     child: Text(
                       'لا إله الإ الله',
                     ),
@@ -81,19 +86,22 @@ class _HomeScreenState extends State<HomeScreen> {
                   PopupMenuDivider(),
                   PopupMenuItem(
                     value: 'لا حول ولا قوة إلا بالله',
-                    height: 20,
+                    padding: EdgeInsets.only(right: 10),
+                    height: 12,
                     child: Text('لا حول ولا قوة إلا بالله'),
                   ),
                   PopupMenuDivider(),
                   PopupMenuItem(
                     value: 'اللهم صل وسلم على نبينا محمد',
-                    height: 20,
+                    padding: EdgeInsets.only(right: 10),
+                    height: 12,
                     child: Text('اللهم صل وسلم على نبينا محمد'),
                   ),
                   PopupMenuDivider(),
                   PopupMenuItem(
                     value: 'استغفر الله',
-                    height: 20,
+                    padding: EdgeInsets.only(right: 10),
+                    height: 12,
                     child: Text(
                       'استغفر الله ',
                     ),
@@ -101,7 +109,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   PopupMenuDivider(),
                   PopupMenuItem(
                       value: 'سبحان الله',
-                      height: 20,
+                      padding: EdgeInsets.only(right: 10),
+                      height: 12,
                       child: Text(
                         'سبحان الله',
                       )),
