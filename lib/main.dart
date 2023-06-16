@@ -1,5 +1,7 @@
 import 'package:app_azkar/screens/home_screen.dart';
 import 'package:app_azkar/screens/launch_screen.dart';
+import 'package:app_azkar/theme/app_theme/app_theme_dark.dart';
+import 'package:app_azkar/theme/app_theme/app_theme_light.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
@@ -13,6 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
+      theme: getAppThemeLight(),
       debugShowCheckedModeBanner: false,
       localizationsDelegates: const [
         GlobalWidgetsLocalizations.delegate,

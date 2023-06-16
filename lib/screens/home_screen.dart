@@ -20,12 +20,13 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Colors.transparent,
         centerTitle: true,
         automaticallyImplyLeading: true,
-        title: Text('مسبحة الإكترونية',style:  GoogleFonts.arefRuqaa(
-          fontSize: 22
-        ),),
+        title:  const Text('مسبحة الإكترونية',),
         actions: [
+
           PopupMenuButton<String>(
-              onSelected: (String value) {
+              // light
+            icon: const Icon(Icons.more_vert,color: const Color(0xFF21ABA5) ,),
+            onSelected: (String value) {
                 if(_content != value){
                   setState(() {
                     _content = value;
@@ -34,42 +35,42 @@ class _HomeScreenState extends State<HomeScreen> {
                 }
               },
               itemBuilder: (context) {
-            return[
+            return const [
                PopupMenuItem(
                 value: 'الحمد الله',
                 height: 20,
-                child: Text('الحمد الله', style: GoogleFonts.arefRuqaa(),),
+                child: Text('الحمد الله',),
               ),
-              const PopupMenuDivider(),
+               PopupMenuDivider(),
               PopupMenuItem(
                 value: 'لا إله الإ الله',
                 height: 20,
-                child: Text('لا إله الإ الله', style: GoogleFonts.arefRuqaa(),),
+                child: Text('لا إله الإ الله',),
               ),
-              const PopupMenuDivider(
+               PopupMenuDivider(
               ),
               PopupMenuItem(
                 value: 'لا حول ولا قوة إلا بالله',
                 height: 20,
-                child: Text('لا حول ولا قوة إلا بالله', style: GoogleFonts.arefRuqaa(),),
+                child: Text('لا حول ولا قوة إلا بالله'),
               ),
-              const PopupMenuDivider(),
+               PopupMenuDivider(),
               PopupMenuItem(
                 value: 'اللهم صل وسلم على نبينا محمد',
                 height: 20,
-                child: Text('اللهم صل وسلم على نبينا محمد', style: GoogleFonts.arefRuqaa(),),
+                child: Text('اللهم صل وسلم على نبينا محمد'),
               ),
-              const PopupMenuDivider(),
+               PopupMenuDivider(),
                PopupMenuItem(
                 value: 'استغفر الله',
                 height: 20,
-                child:Text('استغفر الله ', style: GoogleFonts.arefRuqaa(),),
+                child:Text('استغفر الله ', ),
               ),
-              const PopupMenuDivider(),
+               PopupMenuDivider(),
                PopupMenuItem(
                 value: 'سبحان الله',
                 height: 20,
-                child: Text('سبحان الله', style: GoogleFonts.arefRuqaa(),)
+                child: Text('سبحان الله',)
               ),
 
             ];
@@ -85,8 +86,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 begin: AlignmentDirectional.topStart,
                 end: AlignmentDirectional.bottomEnd,
                 colors: [
-                  Color(0xFF439A97),
-                  Color(0xFF97DECE),
+                  // Color(0xFF439A97), // old
+                  // Color(0xFF97DECE), //old
+                  // Color(0xFFFFFFFF), // light
+                  // Color(0xffF5F6FA), // light
+                  //
+                  Color(0xFF252525), // Dark
+                  Color(0xFF252525), // Dark
+
 
                 ]
 
@@ -141,7 +148,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Expanded(
                     child: Text(_content,
                       textAlign: TextAlign.center,
-                      style: GoogleFonts.arefRuqaa(
+                      style: TextStyle(
                       fontWeight: FontWeight.w300,
                       fontSize: 20,)
                     ),
@@ -151,7 +158,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 60,
                     color: const Color(0xFFCBEDD5),
                     alignment: AlignmentDirectional.center,
-                    child: Text(_counter.toString(), style: GoogleFonts.arefRuqaa(
+                    child: Text(_counter.toString(), style: TextStyle(
                             fontWeight: FontWeight.w300,
                             fontSize: 20
                         ),),
@@ -180,7 +187,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           borderRadius: BorderRadius.only(topRight: Radius.circular(10),),
                         )
                       ),
-                      child: Text('تسبيح', style: GoogleFonts.arefRuqaa(
+                      child: Text('تسبيح', style: TextStyle(
+                        color: Colors.white,
                       fontSize: 18,
 
                     ),),),
@@ -193,12 +201,12 @@ class _HomeScreenState extends State<HomeScreen> {
                           });
                         },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor:const Color(0xFF1D566E),
+                          backgroundColor:const Color(0xFF97DECE),
                           shape: const RoundedRectangleBorder(
                             borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10))
                           )
                         ),
-                        child: Text('اعادة',style: GoogleFonts.arefRuqaa(
+                        child: Text('اعادة',style: TextStyle(
                       fontSize: 18,
 
                     ),)),
