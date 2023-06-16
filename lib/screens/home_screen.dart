@@ -1,6 +1,4 @@
 import 'package:app_azkar/provider/theme_provider.dart';
-import 'package:app_azkar/theme/app_color/app_color_dark.dart';
-import 'package:app_azkar/theme/app_color/app_color_light.dart';
 import 'package:app_azkar/theme/app_theme/app_theme_dark.dart';
 import 'package:app_azkar/theme/app_theme/app_theme_light.dart';
 import 'package:flutter/material.dart';
@@ -23,14 +21,11 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    bool _cheakTheme =
-        Provider.of<ThemeProvider>(context).savedTheme == ('ThemeDark');
-
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         leading: IconButton(
-          icon: _cheakTheme
+          icon: Provider.of<ThemeProvider>(context).savedTheme == ('ThemeDark')
               ? const Icon(Icons.wb_sunny_outlined)
               : const Icon(Icons.nights_stay_rounded),
           onPressed: () {
@@ -121,7 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            Spacer(),
+            const Spacer(),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -237,7 +232,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ],
             ),
-            Spacer(),
+            const Spacer(),
           ],
         ),
       ),

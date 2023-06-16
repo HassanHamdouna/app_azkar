@@ -24,16 +24,6 @@ class _LaunchScreenState extends State<LaunchScreen> {
     return  Scaffold(
       body: Container(
         alignment: Alignment.center,
-          // decoration: const BoxDecoration(
-          //   gradient: LinearGradient(
-          //       begin: AlignmentDirectional.topStart,
-          //       end: AlignmentDirectional.bottomEnd,
-          //       colors: [
-          //         Color(0xFF439A97),
-          //         Color(0xFFCBEDD5),
-          //       ]
-          //   ),
-          // ),
         child: Text('مسبحة الإكترونية', style: GoogleFonts.arefRuqaa(
           color: AppColorLight.textAppBarColorLight1,
           fontSize: 26,
