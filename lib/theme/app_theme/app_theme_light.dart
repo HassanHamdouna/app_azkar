@@ -6,19 +6,13 @@ import 'package:google_fonts/google_fonts.dart';
 ThemeData getAppThemeLight() => ThemeData(
       primaryColor: AppColorLight.primaryColorLight,
       appBarTheme: const AppBarTheme(
-
-        backgroundColor:AppColorLight.doNotColorLight ,
-        // color: AppColorLight.doNotColorLight,
+        backgroundColor: AppColorLight.doNotColorLight,
         centerTitle: true,
-        iconTheme: IconThemeData(
-          color: AppColorLight.iconColorLight
-        ),
-        titleTextStyle: TextStyle(
-          color: AppColorLight.iconColorLight,
-            fontSize: 20
-        ),
+        iconTheme: IconThemeData(color: AppColorLight.iconColorLight),
+        titleTextStyle:
+            TextStyle(color: AppColorLight.iconColorLight, fontSize: 20),
       ),
-      scaffoldBackgroundColor:AppColorLight.whiteColorLight ,
+      scaffoldBackgroundColor: AppColorLight.whiteColorLight,
       backgroundColor: AppColorLight.bakGroundColorLight,
       fontFamily: GoogleFonts.arefRuqaa().fontFamily,
       elevatedButtonTheme: ElevatedButtonThemeData(
@@ -31,7 +25,7 @@ ThemeData getAppThemeLight() => ThemeData(
         ),
       ),
       textTheme: TextTheme(
-          bodyMedium:  GoogleFonts.arefRuqaa(
+        bodyMedium: GoogleFonts.arefRuqaa(
           color: Colors.black,
         ),
       ),
