@@ -1,4 +1,5 @@
 import 'package:app_azkar/provider/theme_provider.dart';
+import 'package:app_azkar/theme/app_color/app_color_light.dart';
 import 'package:app_azkar/theme/app_theme/app_theme_dark.dart';
 import 'package:app_azkar/theme/app_theme/app_theme_light.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +14,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int _counter = 0;
+  int _counterNumber = 0;
 
   bool _iconBool = false;
 
@@ -54,61 +55,156 @@ class _HomeScreenState extends State<HomeScreen> {
                 if (_content != value) {
                   setState(() {
                     _content = value;
-                    _counter = 0;
+                    _counterNumber = 0;
                   });
                 }
               },
               offset: const Offset(0, 50),
               itemBuilder: (context) {
-                return const [
+                return [
                   PopupMenuItem(
                     value: 'الحمد الله',
-                    padding: EdgeInsets.only(right: 10),
+                    padding: const EdgeInsets.only(right: 10),
                     height: 12,
-                    child: Text(
-                      'الحمد الله',
-                    ),
+                    child: _content == 'الحمد الله'
+                        ? Row(
+                            children: const [
+                              Text(
+                                'الحمد الله',
+                              ),
+                              Spacer(),
+                              Icon(Icons.check,
+                                  color: AppColorLight.iconColorLight,
+                                  size: 20),
+                              SizedBox(
+                                width: 10,
+                              ),
+                            ],
+                          )
+                        : const Text(
+                            'الحمد الله',
+                          ),
                   ),
-                  PopupMenuDivider(),
+                  const PopupMenuDivider(),
                   PopupMenuItem(
                     value: 'لا إله الإ الله',
-                    padding: EdgeInsets.only(right: 10),
+                    padding: const EdgeInsets.only(right: 10),
                     height: 12,
-                    child: Text(
-                      'لا إله الإ الله',
-                    ),
+                    child: _content == 'لا إله الإ الله'
+                        ? Row(
+                            children: const [
+                              Text(
+                                'لا إله الإ الله',
+                              ),
+                              Spacer(),
+                              Icon(Icons.check,
+                                  color: AppColorLight.iconColorLight,
+                                  size: 20),
+                              SizedBox(
+                                width: 10,
+                              ),
+                            ],
+                          )
+                        : const Text(
+                            'لا إله الإ الله',
+                          ),
                   ),
-                  PopupMenuDivider(),
+                  const PopupMenuDivider(),
                   PopupMenuItem(
                     value: 'لا حول ولا قوة إلا بالله',
-                    padding: EdgeInsets.only(right: 10),
+                    padding: const EdgeInsets.only(right: 10),
                     height: 12,
-                    child: Text('لا حول ولا قوة إلا بالله'),
+                    child: _content == 'لا حول ولا قوة إلا بالله'
+                        ? Row(
+                            children: const [
+                              Text(
+                                'لا حول ولا قوة إلا بالله',
+                              ),
+                              Spacer(),
+                              Icon(Icons.check,
+                                  color: AppColorLight.iconColorLight,
+                                  size: 20),
+                              SizedBox(
+                                width: 10,
+                              ),
+                            ],
+                          )
+                        : const Text(
+                            'لا حول ولا قوة إلا بالله',
+                          ),
                   ),
-                  PopupMenuDivider(),
+                  const PopupMenuDivider(),
                   PopupMenuItem(
                     value: 'اللهم صل وسلم على نبينا محمد',
-                    padding: EdgeInsets.only(right: 10),
+                    padding: const EdgeInsets.only(right: 10),
                     height: 12,
-                    child: Text('اللهم صل وسلم على نبينا محمد'),
+                    child: _content == 'اللهم صل وسلم على نبينا محمد'
+                        ? Row(
+                            children: const [
+                              Text(
+                                'اللهم صل وسلم على نبينا محمد',
+                              ),
+                              Spacer(),
+                              Icon(Icons.check,
+                                  color: AppColorLight.iconColorLight,
+                                  size: 20),
+                              SizedBox(
+                                width: 10,
+                              ),
+                            ],
+                          )
+                        : const Text(
+                            'اللهم صل وسلم على نبينا محمد',
+                          ),
                   ),
-                  PopupMenuDivider(),
+                  const PopupMenuDivider(),
                   PopupMenuItem(
                     value: 'استغفر الله',
-                    padding: EdgeInsets.only(right: 10),
+                    padding: const EdgeInsets.only(right: 10),
                     height: 12,
-                    child: Text(
-                      'استغفر الله ',
-                    ),
+                    child: _content == 'استغفر الله'
+                        ? Row(
+                            children: const [
+                              Text(
+                                'استغفر الله',
+                              ),
+                              Spacer(),
+                              Icon(Icons.check,
+                                  color: AppColorLight.iconColorLight,
+                                  size: 20),
+                              SizedBox(
+                                width: 10,
+                              ),
+                            ],
+                          )
+                        : const Text(
+                            'استغفر الله',
+                          ),
                   ),
-                  PopupMenuDivider(),
+                  const PopupMenuDivider(),
                   PopupMenuItem(
-                      value: 'سبحان الله',
-                      padding: EdgeInsets.only(right: 10),
-                      height: 12,
-                      child: Text(
-                        'سبحان الله',
-                      )),
+                    value: 'سبحان الله',
+                    padding: const EdgeInsets.only(right: 10),
+                    height: 12,
+                    child: _content == 'سبحان الله'
+                        ? Row(
+                            children: const [
+                              Text(
+                                'سبحان الله',
+                              ),
+                              Spacer(),
+                              Icon(Icons.check,
+                                  color: AppColorLight.iconColorLight,
+                                  size: 20),
+                              SizedBox(
+                                width: 10,
+                              ),
+                            ],
+                          )
+                        : const Text(
+                            'سبحان الله',
+                          ),
+                  ),
                 ];
               })
         ],
@@ -172,7 +268,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         color: const Color(0xFFCBEDD5),
                         alignment: AlignmentDirectional.center,
                         child: Text(
-                          _counter.toString(),
+                          _counterNumber.toString(),
                           style: const TextStyle(
                               fontWeight: FontWeight.w300, fontSize: 20),
                         ),
@@ -192,7 +288,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: ElevatedButton(
                           onPressed: () {
                             setState(() {
-                              _counter++;
+                              _counterNumber++;
                             });
                           },
                           style: ElevatedButton.styleFrom(
@@ -215,7 +311,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: ElevatedButton(
                             onPressed: () {
                               setState(() {
-                                _counter = 0;
+                                _counterNumber = 0;
                               });
                             },
                             style: ElevatedButton.styleFrom(
