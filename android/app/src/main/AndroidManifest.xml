@@ -5,7 +5,7 @@
         android:name="${applicationName}"
         android:icon="@mipmap/ic_app_azker">
         <activity
-            android:name=".MainActivity"
+            android:name="com.hassa2n.app_azkar.MainActivity"
             android:exported="true"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"
